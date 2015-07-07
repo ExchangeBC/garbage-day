@@ -27,8 +27,8 @@ Pull requests are welcome. If you would like to contribute a package, please see
 ## License
 Code, data and content in this repository are licensed under different licenses.
 
-- All code in the /code repository is licensed under the Apache License 2.0. See LICENSE.Apache-2.0 in the appropriate directories.
-- Source data in /data-raw is licensed under the Open Government License - British Columbia.
+- All code in the /code directory is licensed under the Apache License 2.0. See LICENSE.Apache-2.0 in the appropriate directories.
+- Source data in /data directory is licensed under the Open Government License - British Columbia.
 - Content such as docs, wikis (i.e. not code or data) is licensed under the Creative Commons Attribution 4.0 International.
 
 
