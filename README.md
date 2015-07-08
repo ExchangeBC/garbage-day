@@ -29,8 +29,3 @@ Code, data and content in this repository are licensed under different licenses.
 
 - All code in the /code directory is licensed under the Apache License 2.0. See [LICENSE.Apache-2.0](https://github.com/BCDevExchange/garbage-day/blob/lm0625/code/LICENSE.Apache.2.0) in the appropriate directories.
 - Source data in /data directory is licensed under the Open Government License - British Columbia. See [LICENSE.BC-OGL-2.0](https://github.com/BCDevExchange/garbage-day/blob/lm0625/data/LICENSE.BC-OGL-2.0) in the appropriate directories.
-- Content such as docs, wikis (i.e. not code or data) is licensed under the Creative Commons Attribution 4.0 International.
-
-
-
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />
