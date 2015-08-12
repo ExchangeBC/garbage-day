@@ -34,4 +34,4 @@ Pull requests are welcome. If you would like to contribute a package, please see
 Code, data and content in this repository are licensed under different licenses.
 
 - All code in the /code directory is licensed under the Apache License 2.0. See [LICENSE.Apache-2.0](https://github.com/BCDevExchange/garbage-day/blob/lm0625/code/LICENSE.Apache.2.0) in the appropriate directories.
-- Source data in /data directory is licensed under the Open Government License - British Columbia. See [LICENSE.BC-OGL-2.0](https://github.com/BCDevExchange/garbage-day/blob/lm0625/data/LICENSE.BC-OGL-2.0) in the appropriate directories.
+- Source data in /data directory is licensed under the Open Government License - British Columbia. See [LICENSE.OGL-Kamloops-2.0](https://github.com/BCDevExchange/garbage-day/blob/lm0625/data/LICENSE.OGL-Kamloops-2.0) in the appropriate directories.
