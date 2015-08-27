@@ -9,7 +9,7 @@ Geographic data on municipal waste removal zones.
 ## Data
 Two sets of data are required to determine garbage pickup days for a given address (GIST_Garbage_Schedule, GIST_Garbage_Zone). The first is a list of addresses and the pickup zone with which they are associated (there are 5 zones in Kamloops, 1 for each week day, numbered 1-5). The second is a list of each day of the year and the pickup zone associated with each pickup day (w=weekend, s=statuatory holiday). The data represents 2015 pickup dates only however this will be extended to include 2016 closer to the end of the year.
 
-The two tables of data can be accessed here: http://geoprodsvr.kamloops.ca:6080/arcgis/rest/services/BCDevExchange/GarbagePickup/MapServer (this url will be changing in the next few weeks)
+The two tables of data can be accessed here: http://maps.kamloops.ca/arcgis3/rest/services/BCDevExchange/GarbagePickup/MapServer
 
 Also included (in case the spatial location of addresses and zones is of use) are two spatial datasets of AddressPoint (their address attribute is the data source in GIST_Garbage_Schedule) and GarbageZone (select the ArcGIS JavaScript link to see the map and zoom in to see the AddressPoints in their Zone). I don't think this is required for this development though.
 
