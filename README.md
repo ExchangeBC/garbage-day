@@ -1,9 +1,12 @@
-[![Stories in Ready](https://badge.waffle.io/BCDevExchange/garbage-day.png?label=ready&title=Ready)](https://waffle.io/BCDevExchange/garbage-day)
+
 <a rel="Exploration" href="https://github.com/BCDevExchange/docs/blob/master/discussion/projectstates.md"><img alt="Being designed and built, but in the lab. May change, disappear, or be buggy." style="border-width:0" src="http://bcdevexchange.org/badge/2.svg" title="Being designed and built, but in the lab. May change, disappear, or be buggy." /></a>  
+
+[![Stories in Ready](https://badge.waffle.io/BCDevExchange/garbage-day.png?label=ready&title=Ready)](https://waffle.io/BCDevExchange/garbage-day)
+
+[![Join the chat at https://gitter.im/BCDevExchange/garbage-day](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BCDevExchange/garbage-day?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Waste Pickup Reminder
 
-[![Join the chat at https://gitter.im/BCDevExchange/garbage-day](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BCDevExchange/garbage-day?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 The purpose of this repo is to collaborate on ways to notify municipal residents when their garbage pickup day is.
