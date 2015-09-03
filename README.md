@@ -3,6 +3,8 @@
 
 # Waste Pickup Reminder
 
+[![Join the chat at https://gitter.im/BCDevExchange/garbage-day](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BCDevExchange/garbage-day?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 The purpose of this repo is to collaborate on ways to notify municipal residents when their garbage pickup day is.
 
