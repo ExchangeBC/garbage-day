@@ -3,7 +3,7 @@
 
 [![Stories in Ready](https://badge.waffle.io/BCDevExchange/garbage-day.png?label=ready&title=Ready)](https://waffle.io/BCDevExchange/garbage-day)
 
-[![Join the chat at https://gitter.im/BCDevExchange/garbage-day](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BCDevExchange/garbage-day?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/BCDevExchange/garbage-day](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BCDevExchange/garbage-day?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge "The BCDevExchange will not collect, use, or disclose personal information using Gitter. Please be aware however that IP addresses and other information may be collected by Gitter itself, and these IP addresses and other information collected may be stored on Gitter servers located outside of Canada.  Please do not provide any personal information, or third party information (ie. talk about others) in your use of the Gitter application.")
 
 # Waste Pickup Reminder
 
