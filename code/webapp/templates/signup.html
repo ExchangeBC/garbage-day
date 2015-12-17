@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>G-Day</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+ 
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Kamloops G-Day</h3>
+      </div>
+ 
+      <div class="jumbotron" style="background-image: url(../static/images/kamloops.jpg); background-size: cover;">
+        <h1 style="color:white;">Garbage Day</h1>
+        <form class="form-signin" action="/signUp" method="post">
+        <label for="inputAddress" class="sr-only">Address</label>
+        <input type="address" name="inputAddress" id="inputAddress" class="form-control" placeholder="Home Address" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>      
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>   
+      </form>
+      </div>
+ 
+      <footer class="footer">
+        <p>&copy; Legal Stuff 2015</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>
