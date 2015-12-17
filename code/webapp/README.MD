@@ -1,6 +1,6 @@
-Further configuration for mysql database:
+#Further configuration for mysql database:
 
-
+```
 CREATE DATABASE garbageday;
 
 CREATE TABLE users (
@@ -8,9 +8,11 @@ CREATE TABLE users (
  email VARCHAR(100),
  zone INT,
 confirmed BOOLEAN NOT NULL DEFAULT 0);
+```
 
 -------------------------------------------------------------------------
 
+```
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_createUser`(
     IN p_email VARCHAR(255),
@@ -37,3 +39,4 @@ BEGIN
     END IF;
 END$$
 DELIMITER ;
+````
