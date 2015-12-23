@@ -1,8 +1,12 @@
-#Further configuration for mysql database:
+#This has only been tested with python 2.x
+
 ##These dependencies must be installed on machine:
 
 sudo pip install Flask
 sudo pip install Flask-Mail
+sudo pip install itsdangerous
+
+##Further configuration for mysql database:
 
 ```
 CREATE DATABASE garbageday;
