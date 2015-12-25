@@ -1,0 +1,107 @@
+html {
+	font-family: arial, sans-serif, serif;
+	position: relative;
+	min-height: 100%;
+}
+body {
+	background-image: url("kamloops-map.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0px;
+	margin: 4.2em 0 3em 0;
+	font-size: 90%;
+}
+a.clean {
+	padding: none;
+	margin: none;
+	color: white;
+	text-decoration: none;
+}
+.header {
+	position: absolute;
+	padding: 0px;
+	font-weight: bold;
+	margin: 0px;
+	left: 0px;
+	top: 0px;
+	height: 4.2em;
+	width: 100%;
+	background: #88AAFF;
+	color: white;
+}
+.headerlogo {
+	position: relative;
+	padding-top: 0.8em;
+	float: left;
+	vertical-align: center;
+	height: 60%;
+}
+.menuitem {
+	float: right;
+	padding: 0.8em;
+	padding-top: 1.5em;
+}
+.smalllogo {
+	display: block;
+	height: 100%;
+	width: auto;
+}
+
+.contentwrapper {
+	position: relative;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10%;
+	height: 40%;
+}
+.contentlogo {
+	position: relative;
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.biglogo {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.contentsearch {
+	width: 50%;
+	height: 5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.contentsearchbar {
+	margin-left: auto;
+	margin-top: 1.5em;
+	width: 80%;
+}
+.contentsearchbutton {
+	display: inline;
+	width: 10%;
+	overflow: hide;
+}
+
+.footerwrapper {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hide;
+	overflow-y: hide;
+}
+.footer {
+	position: absolute;
+	height: auto;
+	min-height: 1em;
+	font-size: 0.8em;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background: #7799EE;
+	color: white;
+}
