@@ -13,9 +13,9 @@ def json_blob():
 	r = requests.get(govturl)
 	jsonblob = r.text
 	jdict = json.loads(jsonblob)
-	zone = int(jdict["features"][0]["attributes"]["ZONE"])
+	zone = jdict["features"][0]["attributes"]["ZONE"]
 	return zone
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=4321, debug=True)
+	app.run(host='0.0.0.0', port=4321, debug=False)
 
