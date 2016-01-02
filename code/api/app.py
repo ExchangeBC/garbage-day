@@ -24,7 +24,7 @@ def json_blob():
     zone = almostzone["features"][0]["attributes"]["ZONE"]
     #return zone
     dateurl = "http://geoprodsvr.kamloops.ca:6080/arcgis/rest/services/BCDevExchange/GarbagePickup/MapServer/2/query"
-    datepayload = {{"geometryType":"esriGeometryEnvelope",
+    datepayload = {"geometryType":"esriGeometryEnvelope",
         "where":"ZONE = '" + zone + "'",
         "spatialRel":"esriSpatialRelIntersects",
         "outFields":"Address, Zone",
@@ -36,7 +36,7 @@ def json_blob():
 	"returnCountOnly":"false",
 	"f":"pjson",
 	"returnDistinctValues":"false"}
-   date = json.loads(dr.text(requests.get(dateurl, dparams=datepayload)))
+   date = json.loads(dr.text(requests.get(dateurl, dparams=datepayload))) #Apparently, something's wrong with the parenthises on this line
    return date
 
 if __name__ == '__main__':
