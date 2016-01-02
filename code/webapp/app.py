@@ -1,5 +1,7 @@
 from flask import render_template, request, json, redirect, url_for
 from config import app, mysql, send_email, key
+import requests
+import json
 
 # home page
 @app.route("/")
@@ -23,9 +25,11 @@ def signUp():
             conn = mysql.connect()
             cursor = conn.cursor()
             # adds user to db	    
-            cursor.callproc('sp_createUser',(email,address))
-            data = cursor.fetchall()
-            if len(data) is 0:
+            if cursor.execute('select (1) from users where email = %s limit 1', (email)):
+                return render_template("alreadyused.html")
+            else:
+                # creates user
+                cursor.execute('insert into users (email,zone) values (%s,%s)', (email,address))
                 # sends confirmation email
                 token = key.dumps(email, salt='email-confirm-key')
                 confirm_url = url_for('confirm_email',token=token,_external=True)
@@ -34,11 +38,6 @@ def signUp():
                 send_email(email, subject, html)
                 conn.commit()
                 return render_template('confirmation.html')
-            # checks if email already registered
-            elif str(data[0][0]) == "Email has already been used!":
-                return render_template("alreadyused.html")
-            else:
-                return json.dumps({'error1':str(data[0])})
         else:
             return json.dumps({'html':'<span>Enter the required fields</span>'})
     except Exception as e:
@@ -68,6 +67,28 @@ def confirm_email(token):
         return render_template("activated.html")
     cursor.close()
     conn.close()
+
+@app.route('/getzone')
+def json_blob():
+    address = request.args['address']
+    govturl = "http://maps.kamloops.ca/arcgis3/rest/services/BCDevExchange/GarbagePickup/MapServer/3/query"
+    payload = {"geometryType":"esriGeometryEnvelope",
+        "where":"ADDRESS = '" + address + "'",
+        "spatialRel":"esriSpatialRelIntersects",
+        "outFields":"Address, Zone",
+        "returnGeometry":"true",
+        "returnIdsOnly":"false",
+        "returnCountOnly":"false",
+        "returnZ":"false",
+        "returnM":"false",
+        "returnCountOnly":"false",
+        "f":"pjson",
+        "returnDistinctValues":"false"}
+    r = requests.get(govturl, params=payload)
+    jsonblob = r.text
+    jdict = json.loads(jsonblob)
+    zone = jdict["features"][0]["attributes"]["ZONE"]
+    return zone
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
