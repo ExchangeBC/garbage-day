@@ -36,8 +36,8 @@ def json_blob():
 	"returnCountOnly":"false",
 	"f":"pjson",
 	"returnDistinctValues":"false"}
-   date = json.loads(dr.text(requests.get(dateurl, dparams=datepayload))) #Apparently, something's wrong with the parenthises on this line
-   return date
+    date = json.loads(dr.text(requests.get(dateurl, dparams=datepayload)))
+    return date
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False)
