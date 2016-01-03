@@ -20,24 +20,25 @@ def json_blob():
         "returnCountOnly":"false",
         "f":"pjson",
         "returnDistinctValues":"false"}
-    almostzone = json.loads(zr.text(requests.get(zoneurl, zparams=zonepayload)))
+    zr = requests.get(zoneurl, params=zonepayload)
+    zoneblob = zr.text
+    almostzone = json.loads(zoneblob)
     zone = almostzone["features"][0]["attributes"]["ZONE"]
-    #return zone
+    return zone
     dateurl = "http://geoprodsvr.kamloops.ca:6080/arcgis/rest/services/BCDevExchange/GarbagePickup/MapServer/2/query"
-    datepayload = {"geometryType":"esriGeometryEnvelope",
-        "where":"ZONE = '" + zone + "'",
-        "spatialRel":"esriSpatialRelIntersects",
-        "outFields":"Address, Zone",
-        "returnGeometry":"true",
-        "returnIdsOnly":"false",
-        "returnCountOnly":"false",
-        "returnZ":"false",
-        "returnM":"false",
+    datepayload = {"where":"ZONE = '" + zone + "'",
+	"geometryType":"esriGeometryEnvelope",
+	"spatialRel":"esriSpatialRelIntersects",
+	"returnGeometry":"true",
+	"returnIdsOnly":"false",
 	"returnCountOnly":"false",
-	"f":"pjson",
-	"returnDistinctValues":"false"}
-   date = json.loads(dr.text(requests.get(dateurl, dparams=datepayload))) #Apparently, something's wrong with the parenthises on this line
-   return date
+	"returnZ":"false",
+	"returnM":"false",
+	"returnDistinghValues":"false",
+	"f":"pjson"}
+    dr = requests.get(dateurl, params=datepayload)
+    dateblob = dr.text
+    return dateblob
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False)
