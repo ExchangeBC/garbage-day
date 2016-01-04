@@ -21,7 +21,7 @@ Two sets of data are required to determine garbage pickup days for a given addre
 
 The two tables of data can be accessed here: http://maps.kamloops.ca/arcgis3/rest/services/BCDevExchange/GarbagePickup/MapServer
 
-Also included (in case the spatial location of addresses and zones is of use) are two spatial datasets of AddressPoint (their address attribute is the data source in GIST_Garbage_Schedule) and GarbageZone (select the ArcGIS JavaScript link to see the map and zoom in to see the AddressPoints in their Zone). I don't think this is required for this development though.
+Also included (in case the spatial location of addresses and zones is of use) are two spatial datasets of AddressPoint (their address attribute is the data source in GIST_Garbage_Schedule) and GarbageZone (select the ArcGIS JavaScript link to see the map and zoom in to see the AddressPoints in their Zone).
 
 ## Requirements
 
