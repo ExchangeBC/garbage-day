@@ -3,6 +3,10 @@ This Flask app takes an HTTP request containing an address, accesses an [API](ht
 
 ##Requirements:
 The following must be installed on the machine:
-- [Flask](http://flask.pocoo.org/)  
-    pip install Flask
+
+- [Flask](http://flask.pocoo.org/)
+ 
+    $ pip install Flask
+
 - [requests](http://docs.python-requests.org/en/latest/)
+- [json](https://docs.python.org/2/library/json.html)
