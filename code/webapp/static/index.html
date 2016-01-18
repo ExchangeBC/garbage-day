@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kamloops.io</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Kamloops.io</h3>
+      </div>
+
+      <div class="jumbotron" style="background-image: url(http://kamloops.io/images/kamloops.jpg); background-size: cover;">
+          <img src="http://kamloops.io/images/logo.png">
+        <h4 style="color:white;">Garbage Day Reminder (alpha 0.3)</h4>
+        <form class="form-signin" action="/signup" method="post">
+        <div style="display: none;">
+            <input type="text" id="PreventChromeAutocomplete" name="PreventChromeAutocomplete" autocomplete="address-level4" />
+        </div>
+        <label for="inputAddress" class="sr-only">Address</label>
+        <input type="text" class="form-control bc-geocoder typeahead" name="inputAddress" id="inputAddress" placeholder="Home Address" data-template="simple" autocomplete="off" />
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+      </form>
+      </div>
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript" src="geocoder-widget-1.0.0.js"></script>
+      <footer class="footer">
+        <p>&copy; Creative commons - take what you want - no affiliation with the City of Kamloops etc.</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

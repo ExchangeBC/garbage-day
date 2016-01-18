@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kamloops.io</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Kamloops.io</h3>
+      </div>
+
+      <div class="jumbotron" style="background-image: url(http://kamloops.io/images/kamloops.jpg); background-size: cover;">
+        <img src="http://kamloops.io/images/logo.png">
+        {% block content %}{% endblock %}
+      <footer class="footer">
+        <p>&copy; Creative commons - take what you want - no affiliation with the City of Kamloops etc.</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

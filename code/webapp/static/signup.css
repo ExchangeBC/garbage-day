@@ -4,7 +4,7 @@ body {
 }
 .form-signin {
   max-width: 330px;
-  padding: 15px; 
+  padding: 15px;
   margin: 0 auto;
 }
 .form-signin .form-signin-heading,
@@ -20,8 +20,9 @@ body {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px; 
+  padding: 10px;
   font-size: 16px;
+  width: 100%;
 }
 .form-signin .form-control:focus {
   z-index: 2;
@@ -30,4 +31,44 @@ body {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.twitter-typeahead {
+    position: relative !important;
+    height: auto !important;
+    -webkit-box-sizing: border-box !important;
+       -moz-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+    font-size: 16px !important;
+    width: 100% !important;
+}
+.tt-hint {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 10px !important;
+    background-color: #fff !important;
+}
+
+.tt-dropdown-menu {    /* used to be tt-dropdown-menu in older versions */
+  width: 100% !important;
+  margin-top: 4px !important;
+  padding: 4px 0 !important;
+  background-color: #fff !important;
+  border: 2px solid #ccc !important;
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+  background-color: #fff !important;
+}
+
+.tt-suggestion.tt-cursor,.tt-suggestion:hover {
+  color: #fff !important;
+  background-color: #0097cf !important;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
 }

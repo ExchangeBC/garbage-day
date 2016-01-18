@@ -13,6 +13,11 @@ CREATE DATABASE garbageday;
 CREATE TABLE users (
  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
  email VARCHAR(100),
+ address varchar(255),
  zone INT,
 confirmed BOOLEAN NOT NULL DEFAULT 0);
-```
+
+CREATE TABLE zones (
+ id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ pickupdate DATETIME,
+ zone INT);

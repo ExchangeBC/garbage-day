@@ -1,6 +1,7 @@
 from flask import Flask
-from flask.ext.mysql import MySQL
-from flask_mail import Message, Mail
+from flask_mail import Mail
+from flask_mail import Message
+from flaskext.mysql import MySQL
 from itsdangerous import URLSafeTimedSerializer
 
 app = Flask(__name__)
@@ -27,6 +28,7 @@ app.config.update(
 mail = Mail(app)
 mysql = MySQL()
 mysql.init_app(app)
+
 
 def send_email(to, subject, template):
     msg = Message(
