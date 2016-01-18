@@ -7,6 +7,8 @@ body {
 	background-image: url("kamloops-map.png");
 	background-repeat: no-repeat;
 	background-position: center;
+	background-color: #444;
+	color: white;
 	padding: 0px;
 	margin: 4.2em 0 3em 0;
 	font-size: 90%;

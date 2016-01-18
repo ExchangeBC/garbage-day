@@ -14,8 +14,14 @@ CREATE DATABASE garbageday;
 CREATE TABLE users (
  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
  email VARCHAR(100),
+ address varchar(255),
  zone INT,
 confirmed BOOLEAN NOT NULL DEFAULT 0);
+
+CREATE TABLE zones (
+ id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ pickupdate DATETIME,
+ zone INT);
 ```
 
 -------------------------------------------------------------------------
@@ -28,11 +34,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_createUser`(
 )
 BEGIN
     if ( select exists (select 1 from users where email = p_email) ) THEN
-     
+
         select 'Email has already been used!';
-     
+
     ELSE
-     
+
         insert into users
         (
             email,
@@ -43,7 +49,7 @@ BEGIN
             p_email,
             p_zone
         );
-     
+
     END IF;
 END$$
 DELIMITER ;
