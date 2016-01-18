@@ -5,7 +5,7 @@ from itsdangerous import URLSafeTimedSerializer
 
 app = Flask(__name__)
 # uncomment to turn on debugging
-#app.config['DEBUG'] = True
+app.config['DEBUG'] = True
 
 app.config.update(
   # EMAIL SETTINGS
@@ -13,10 +13,10 @@ app.config.update(
     MAIL_PORT = 465,
     MAIL_USE_SSL = True,
     MAIL_USERNAME = 'email',
-    MAIL_PASSWORD = 'email-password',
+    MAIL_PASSWORD = 'password',
   # MySQL configurations
     MYSQL_DATABASE_USER = 'root',
-    MYSQL_DATABASE_PASSWORD = 'sql-password',
+    MYSQL_DATABASE_PASSWORD = 'password',
     MYSQL_DATABASE_DB = 'garbageday',
     MYSQL_DATABASE_HOST = 'localhost',
   # Secret Passwords!
