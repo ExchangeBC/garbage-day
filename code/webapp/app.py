@@ -6,7 +6,6 @@ from flask import json
 from flask import render_template
 from flask import request
 from flask import url_for
-import requests
 
 # app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -27,8 +26,6 @@ def signUp():
         email = request.form['inputEmail']
         # validate the received values
         if address and email:
-            print email
-            print address
             if "'" in email or '"' in email or "(" in email or " )" in email:
                 raise Exception
             if ',' in email or ";" in email or "%" in email:
@@ -46,6 +43,13 @@ def signUp():
                 conn.commit()
                 cursor.close()
                 conn.close()
+            if cursor.execute('select (1) from users where email = %s limit 1',
+                              (email)):
+                return render_template("alreadyused.html")
+            else:
+                # creates user
+                cursor.execute('insert into users (email,zone) values (%s,%s)',
+                               (email, address))
                 # sends confirmation email
                 token = key.dumps(email, salt='email-confirm-key')
                 confirm_url = url_for('confirm_email',
@@ -55,11 +59,6 @@ def signUp():
                                        confirm_url=confirm_url)
                 send_email(email, subject, html)
                 return render_template('confirmation.html')
-            # checks if email already registered
-            else:
-                cursor.close()
-                conn.close()
-                return render_template("alreadyused.html")
         else:
             cursor.close()
             conn.close()

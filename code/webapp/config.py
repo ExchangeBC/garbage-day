@@ -9,17 +9,20 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 
 app.config.update(
-    MAIL_SERVER='x',
-    MAIL_PORT=465,
-    MAIL_USE_SSL=True,
-    MAIL_USERNAME='x',
-    MAIL_PASSWORD='x',
-    MYSQL_DATABASE_USER='x',
-    MYSQL_DATABASE_PASSWORD='x',
-    MYSQL_DATABASE_DB='x',
-    MYSQL_DATABASE_HOST='x',
-    SECRET_KEY='x',
-    SECURITY_PASSWORD_SALT='x'
+  # EMAIL SETTINGS
+    MAIL_SERVER = 'smtp.gmail.com',
+    MAIL_PORT = 465,
+    MAIL_USE_SSL = True,
+    MAIL_USERNAME = 'email',
+    MAIL_PASSWORD = 'password',
+  # MySQL configurations
+    MYSQL_DATABASE_USER = 'root',
+    MYSQL_DATABASE_PASSWORD = 'password',
+    MYSQL_DATABASE_DB = 'garbageday',
+    MYSQL_DATABASE_HOST = 'localhost',
+  # Secret Passwords!
+    SECRET_KEY = 'password1',
+    SECURITY_PASSWORD_SALT = 'password2'
     )
 
 mail = Mail(app)
